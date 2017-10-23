@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+  <div class="clock">
+    <div class="clock-face">
+      <div class="hand hour-hand"></div>
+      <div class="hand minute-hand"></div>
+      <div class="hand second-hand"></div>
+    </div>
+  </div>
+
+
+  <style>
+    html {
+      background: linear-gradient(
+          2000deg,
+          rgba(241, 242, 181, 0.75),
+          rgba(19, 80, 88, 0.75)
+        /* ), url('https://static.pexels.com/photos/614484/pexels-photo-614484.jpeg'); */
+        ), url('https://static.pexels.com/photos/614974/pexels-photo-614974.jpeg');
+      background-size:cover;
+      font-family:'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display:flex;
+      flex:1;
+      min-height: 100vh;
+      align-items: center;
+    }
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 10px solid #eee;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .hand {
+      position: absolute;
+      top:50%;
+      transform-origin: 100%; /* changes pivot point to right side */
+      transform: rotate(90deg); /* set start position */
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.43, 0.58, 1);
+    }
+    .hour-hand {
+      width: 11rem;
+      height: 8px;
+      background:#444;
+    }
+    .minute-hand {
+      width: 13rem;
+      height:6px;
+      background:#555;
+    }
+    .second-hand {
+      width:50%;
+      height:4px;
+      background:#666;
+    }
+
+  </style>
+    
+  <script>
+    const secondHand = document.querySelector('.second-hand');
+    const minuteHand = document.querySelector('.minute-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate() {
+      const now = new Date();
+      const degAdj = 90;
+
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours();
+      console.log("hours: ", hours, "mins: ", minutes, "secs", seconds);
+
+      const secondsDegrees = ((seconds/60) * 360) + degAdj;
+      const minutesDegrees = ((minutes/60) * 360) + degAdj;
+      const hoursDegrees = ((hours/12) * 360) + degAdj;
+      
+      secondHand.style.transform = `translateY(-2px) rotate(${secondsDegrees}deg)`;
+      minuteHand.style.transform = `translate(2rem, -3px) rotate(${minutesDegrees}deg)`;
+      hourHand.style.transform = `translate(4rem, -4px) rotate(${hoursDegrees}deg)`;
+
+      // fix jitter at 60 seconds
+      // if (secondsDegrees >= (360 + 90 - 6)) {
+      //   secondHand.style.transition = 'none';
+      // }
+    }
+
+    setInterval(setDate, 1000) // set function 'setDate' to run every second
+  </script>
+</body>
+</html>

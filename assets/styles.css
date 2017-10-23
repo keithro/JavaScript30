@@ -1,0 +1,26 @@
+/* 
+Use Sass
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Raleway');
+*/
+
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Crimson Text', serif;
+ */
+
+ body {
+  font-family: 'Open Sans', sans-serif;
+  /* font-size: 62.5% */
+ }
+
+ h1 {
+  font-family: 'Crimson Text', serif;  
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ ul {
+   list-style: none;
+ }
