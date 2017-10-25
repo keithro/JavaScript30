@@ -6,8 +6,6 @@ $color2: rgba(22, 128, 142, 1);
 $color3: rgba(25, 168, 153, 1);
 $color4: rgba(31, 193, 158, 1);
 $color5: rgba(241, 242, 225, 1);
-
-$color6: rgba(255, 226, 187, 1);
 // Font Size
 $font-size-small: 1.4rem;
 $font-size-large: 1.8rem;
@@ -21,8 +19,9 @@ $tablet-breakpoint: 45rem; //720
 $desktop-breakpoint: 60rem; //960
 
 * {
-	// box-sizing: border-box;
-  border: $color4 solid 1px;
+  box-sizing: border-box;
+  margin: 0;
+  // border: $color4 solid 1px;
 }
 html {
   font-size: 62.5%;
@@ -30,9 +29,17 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
 	font-size: $m-size;
-  line-height: 1.6;
+  // line-height: 1.6;
   color:  white;
   background: $color5;
+}
+h1 {
+  font-size: 4.8rem;
+  margin: 0 0 $s-size;
+}
+h3 {
+  line-height: 1.6;
+  margin: 0 0 $s-size;
 }
 a {
   color: white;
@@ -60,30 +67,54 @@ a {
 }
 .card-container {
   background: transparent;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 360px;
+  position: relative;
   @media (min-width: $desktop-breakpoint) {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 400px;
   }
 }
 .card {
-  padding: 20px;
+  padding: 30px;
   border-radius: 22px;
-  width: 390px;
-  height: 260px;
-  // position: absolute;
+  width: 360px;
+  height: 270px;
+  position: absolute;
   @media (min-width: $desktop-breakpoint) {
-    width: 420px;
-    height: 280px;
+    width: 400px;
+    height: 300px;
   }
 }
 .name-card {
   color: darken($color2, 8%);
   background: $color2;
+  transform: rotate(-90deg);
+  top: 50px;
+  left: -50px;
+  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 150ms;
+}
+.name-card h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+.card-container:hover .name-card {
+  transform: translate(25px, -100px) rotate(0deg);
 }
 .title-card {
   background: $color4;
+  color: $color2;
+  top: 60px;
+  left: 50px;
+  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 100ms;
+}
+.title-card h1 {
+  font-weight: 300;
+  color: white;
+}
+.card-container:hover .title-card {
+  transform: translate(100px, 120px);
 }
 .links-container {
   display: flex;
@@ -97,8 +128,15 @@ a {
   }
 }
 .link {
+  font-size: 1.8rem;
   padding: $m-size $l-size;
   border-radius: 8px;
   margin: .2rem;
   background: $color3;
+  transition: all 300ms ease-out 100ms;
+  transform: translateX($l-size);
+}
+.link:hover {
+  transform: translateX($s-size);
+  background: $color4;;
 }
