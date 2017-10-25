@@ -47,20 +47,20 @@ a {
 
 .card-container {
   background: transparent;
-  width: 420px;
+  width: 360px;
   height: 360px;
   position: relative; }
   @media (min-width: 60rem) {
     .card-container {
-      width: 450px;
+      width: 400px;
       height: 400px; } }
 
 .card {
-  padding: 30px;
   border-radius: 22px;
   width: 360px;
   height: 270px;
-  position: absolute; }
+  position: absolute;
+  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2); }
   @media (min-width: 60rem) {
     .card {
       width: 400px;
@@ -69,10 +69,11 @@ a {
 .name-card {
   color: #11606b;
   background: #16808e;
+  padding: 2.4rem;
   transform: rotate(-90deg);
   top: 50px;
   left: -50px;
-  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 150ms; }
+  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 180ms; }
 
 .name-card h1 {
   text-transform: uppercase;
@@ -85,16 +86,18 @@ a {
 .title-card {
   background: #1fc19e;
   color: #16808e;
+  padding: 4.2rem;
   top: 60px;
   left: 50px;
-  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 100ms; }
+  transition: all 800ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 100ms; }
 
 .title-card h1 {
   font-weight: 300;
   color: white; }
 
 .card-container:hover .title-card {
-  transform: translate(100px, 120px); }
+  transform: translate(80px, 100px);
+  box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .links-container {
   display: flex;
@@ -109,15 +112,20 @@ a {
 
 .link {
   font-size: 1.8rem;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 2.4rem;
   border-radius: 8px;
   margin: .2rem;
   background: #19a899;
+  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2);
   transition: all 300ms ease-out 100ms;
-  transform: translateX(3.2rem); }
+  transform: translateX(12%); }
+  @media (min-width: 60rem) {
+    .link {
+      padding: 2.4rem 4.2rem; } }
 
 .link:hover {
-  transform: translateX(1.2rem);
-  background: #1fc19e; }
+  transform: translateX(10%) scale(1.1);
+  background: #1fc19e;
+  box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); }
 
 /*# sourceMappingURL=styles.css.map */
