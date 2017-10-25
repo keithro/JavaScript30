@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Raleway');
+
+/* RGB */
+$color1: rgba(26, 108, 140, 1);
+$color2: rgba(22, 128, 142, 1);
+$color3: rgba(25, 168, 153, 1);
+$color4: rgba(31, 193, 158, 1);
+$color5: rgba(241, 242, 225, 1);
+
+$color6: rgba(255, 226, 187, 1);
+// Font Size
+$font-size-small: 1.4rem;
+$font-size-large: 1.8rem;
+// Spacing
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+// Breakpoints
+$tablet-breakpoint: 45rem; //720
+$desktop-breakpoint: 60rem; //960
+
+* {
+	// box-sizing: border-box;
+  border: $color4 solid 1px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+	font-size: $m-size;
+  line-height: 1.6;
+  color:  white;
+  background: $color5;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+  }
+}
+.display-container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: $desktop-breakpoint) {
+    width: 60vw;
+    height: 100vh;
+  }
+}
+.card-container {
+  background: transparent;
+  width: 400px;
+  height: 400px;
+  @media (min-width: $desktop-breakpoint) {
+    width: 500px;
+    height: 500px;
+  }
+}
+.card {
+  padding: 20px;
+  border-radius: 22px;
+  width: 390px;
+  height: 260px;
+  // position: absolute;
+  @media (min-width: $desktop-breakpoint) {
+    width: 420px;
+    height: 280px;
+  }
+}
+.name-card {
+  color: darken($color2, 8%);
+  background: $color2;
+}
+.title-card {
+  background: $color4;
+}
+.links-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 40vh;
+  overflow: scroll;
+  @media (min-width: $desktop-breakpoint) {
+    width: 40vw;
+    height: 100vh;
+  }
+}
+.link {
+  padding: $m-size $l-size;
+  border-radius: 8px;
+  margin: .2rem;
+  background: $color3;
+}
