@@ -155,39 +155,49 @@ a {
   border-radius: 8px;
   margin: .2rem;
   background: $color3;
-  box-shadow: $shadow-low;
   transition: all 300ms ease-out 100ms;
-  // transform: translateX($xl-size);
-  transform: translateX(11%);
+
+  // transform: translateX(11%);
+  // box-shadow: $shadow-low;
+
+  // New Animation:
+  transform: translateX(25%) scale(0);
+  opacity: 0;
+  
+
   @media (min-width: $desktop-breakpoint) {
     padding: $l-size $xl-size;
   }
 }
+
+@for $i from 1 through 30 {
+  .link-#{$i} {
+    animation: wave 2s ease 1 forwards;
+    animation-delay: 100ms * $i;
+  }
+}
 .link:hover {
-  // transform: translateX($l-size) scale(1.1);
   transform: translateX(10%) scale(1.1);
   background: $color4;
   box-shadow: $shadow-high;
 }
 
-@for $i from 1 through 30 {
-  .link-#{$i} {
-    animation: wave 2s ease 1;
-    animation-delay: .1s * $i;
-  }
-}
 
 @keyframes wave{
   0% {
-    transform: translateX(11%);
+    transform: translateX(25%);
   }
   40% {
     transform: translateX(11.1%) scale(1.03);
+    opacity: 1;
     background: $color4;
     box-shadow: $shadow-high;
   }
   100% {
     transform: translateX(11%);
+    opacity: 1;
+    background: $color3;
+    box-shadow: $shadow-low;
   }
 }
 

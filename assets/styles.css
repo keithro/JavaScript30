@@ -120,147 +120,151 @@ a {
   border-radius: 8px;
   margin: .2rem;
   background: #19a899;
-  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2);
   transition: all 300ms ease-out 100ms;
-  transform: translateX(11%); }
+  transform: translateX(25%) scale(0);
+  opacity: 0; }
   @media (min-width: 60rem) {
     .link {
       padding: 2.4rem 4.2rem; } }
+
+.link-1 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 100ms; }
+
+.link-2 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 200ms; }
+
+.link-3 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 300ms; }
+
+.link-4 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 400ms; }
+
+.link-5 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 500ms; }
+
+.link-6 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 600ms; }
+
+.link-7 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 700ms; }
+
+.link-8 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 800ms; }
+
+.link-9 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 900ms; }
+
+.link-10 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1000ms; }
+
+.link-11 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1100ms; }
+
+.link-12 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1200ms; }
+
+.link-13 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1300ms; }
+
+.link-14 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1400ms; }
+
+.link-15 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1500ms; }
+
+.link-16 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1600ms; }
+
+.link-17 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1700ms; }
+
+.link-18 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1800ms; }
+
+.link-19 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 1900ms; }
+
+.link-20 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2000ms; }
+
+.link-21 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2100ms; }
+
+.link-22 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2200ms; }
+
+.link-23 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2300ms; }
+
+.link-24 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2400ms; }
+
+.link-25 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2500ms; }
+
+.link-26 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2600ms; }
+
+.link-27 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2700ms; }
+
+.link-28 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2800ms; }
+
+.link-29 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 2900ms; }
+
+.link-30 {
+  animation: wave 2s ease 1 forwards;
+  animation-delay: 3000ms; }
 
 .link:hover {
   transform: translateX(10%) scale(1.1);
   background: #1fc19e;
   box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); }
 
-.link-1 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.1s; }
-
-.link-2 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.2s; }
-
-.link-3 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.3s; }
-
-.link-4 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.4s; }
-
-.link-5 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.5s; }
-
-.link-6 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.6s; }
-
-.link-7 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.7s; }
-
-.link-8 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.8s; }
-
-.link-9 {
-  animation: wave 2s ease 1;
-  animation-delay: 0.9s; }
-
-.link-10 {
-  animation: wave 2s ease 1;
-  animation-delay: 1s; }
-
-.link-11 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.1s; }
-
-.link-12 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.2s; }
-
-.link-13 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.3s; }
-
-.link-14 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.4s; }
-
-.link-15 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.5s; }
-
-.link-16 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.6s; }
-
-.link-17 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.7s; }
-
-.link-18 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.8s; }
-
-.link-19 {
-  animation: wave 2s ease 1;
-  animation-delay: 1.9s; }
-
-.link-20 {
-  animation: wave 2s ease 1;
-  animation-delay: 2s; }
-
-.link-21 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.1s; }
-
-.link-22 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.2s; }
-
-.link-23 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.3s; }
-
-.link-24 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.4s; }
-
-.link-25 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.5s; }
-
-.link-26 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.6s; }
-
-.link-27 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.7s; }
-
-.link-28 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.8s; }
-
-.link-29 {
-  animation: wave 2s ease 1;
-  animation-delay: 2.9s; }
-
-.link-30 {
-  animation: wave 2s ease 1;
-  animation-delay: 3s; }
-
 @keyframes wave {
   0% {
-    transform: translateX(11%); }
+    transform: translateX(25%); }
   40% {
     transform: translateX(11.1%) scale(1.03);
+    opacity: 1;
     background: #1fc19e;
     box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); }
   100% {
-    transform: translateX(11%); } }
+    transform: translateX(11%);
+    opacity: 1;
+    background: #19a899;
+    box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2); } }
 @keyframes jiggle {
   0% {
     transform: translateX(0) rotate(-90deg); }
