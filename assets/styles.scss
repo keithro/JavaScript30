@@ -157,10 +157,12 @@ a {
   background: $color3;
   transition: all 300ms ease-out 100ms;
 
+  // OLD ANIMATION:
   // transform: translateX(11%);
   // box-shadow: $shadow-low;
+  // transform: translateX(11%);
 
-  // New Animation:
+  // NEW ANIMATION:
   transform: translateX(25%) scale(0);
   opacity: 0;
   
