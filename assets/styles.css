@@ -13,10 +13,6 @@ body {
   color: white;
   background: #f1f2e1; }
 
-h1 {
-  font-size: 5.2rem;
-  margin: 0 0 1.2rem; }
-
 h3 {
   line-height: 1.6;
   margin: 0 0 1.2rem; }
@@ -73,12 +69,14 @@ a {
   transform: rotate(-90deg);
   top: 50px;
   left: -50px;
-  transition: transform 1200ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 200ms;
+  transition: transform 1000ms cubic-bezier(0.34, 0.99, 0.64, 1.05) 200ms;
   animation: jiggle 800ms ease 2500ms 1; }
 
 .name-card h1 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+  font-size: 5.2rem;
+  margin: 0 0 0.8rem;
   font-weight: 800; }
 
 .card-container:hover .name-card {
@@ -94,7 +92,12 @@ a {
 
 .title-card h1 {
   font-weight: 300;
+  font-size: 5.4rem;
+  margin: 0 0 1.2rem;
   color: white; }
+
+.title-card p {
+  line-height: 2.4rem; }
 
 .card-container:hover .title-card {
   transform: translate(50px, 100px);
