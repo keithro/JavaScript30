@@ -67,7 +67,7 @@ a:hover {
       height: 300px; } }
 
 .name-card {
-  color: #11606b;
+  color: #0f5862;
   background: #16808e;
   padding: 2.4rem;
   transform: rotate(-90deg);
@@ -83,10 +83,10 @@ a:hover {
   font-weight: 800; }
 
 .name-card h1 a {
-  color: #11606b; }
+  color: #0f5862; }
 
 .name-card h1 a:hover {
-  color: #0f5862; }
+  color: #11606b; }
 
 @keyframes jiggle {
   0% {

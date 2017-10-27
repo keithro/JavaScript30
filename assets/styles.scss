@@ -97,7 +97,7 @@ a:hover {
   }
 }
 .name-card {
-  color: darken($color2, 8%);
+  color: darken($color2, 10%);
   background: $color2;
   padding: $l-size;
   transform: rotate(-90deg);
@@ -120,10 +120,10 @@ a:hover {
 //   transform: translate(25px, -100px) rotate(0deg);
 // }
 .name-card h1 a {
-  color: darken($color2, 8%);
+  color: darken($color2, 10%);
 }
 .name-card h1 a:hover {
-  color: darken($color2, 10%);
+  color: darken($color2, 8%);
 }
 @keyframes jiggle {
   0% {
@@ -295,7 +295,6 @@ a:hover {
     animation-timing-function: linear;
     animation-delay: 300ms * $i + 4200ms;
     animation-iteration-count: infinite;
-    // animation-direction: reverse;
   }
 }
 @for $i from 10 through 18 {
