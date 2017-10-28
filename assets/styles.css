@@ -64,7 +64,7 @@ a:hover {
   @media (min-width: 60rem) {
     .card {
       width: 400px;
-      height: 300px; } }
+      height: 280px; } }
 
 .name-card {
   color: #0f5862;
@@ -308,86 +308,83 @@ a:hover {
 .bg-item:nth-child(9n+2),
 .bg-item:nth-child(9n+3) {
   background-color: #16808e;
-  box-shadow: -2.4rem 0 0 0 #11606b; }
+  box-shadow: -2.4rem 0 0 0 #11606b, -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .bg-item:nth-child(9n+4),
 .bg-item:nth-child(9n+5),
 .bg-item:nth-child(9n+6) {
   background-color: #19a899;
-  box-shadow: -2.4rem 0 0 0 #148479; }
+  box-shadow: -2.4rem 0 0 0 #148479, -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .bg-item:nth-child(9n+7),
 .bg-item:nth-child(9n+8),
 .bg-item:nth-child(9n+9) {
   background-color: #ef5373;
-  box-shadow: -2.4rem 0 0 0 #ec2e55; }
+  box-shadow: -2.4rem 0 0 0 #ec2e55, -1px 2px 2px 0 rgba(0, 0, 0, 0.14), -0.5px 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.bg-item:nth-child(odd) {
+  animation-name: travellong; }
+
+.bg-item:nth-child(even) {
+  animation-name: travelshort; }
 
 .bg-item-1 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 9300ms;
   animation-timing-function: linear;
   animation-delay: 5800ms;
   animation-iteration-count: infinite; }
 
 .bg-item-2 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 9600ms;
   animation-timing-function: linear;
   animation-delay: 6100ms;
   animation-iteration-count: infinite; }
 
 .bg-item-3 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 9900ms;
   animation-timing-function: linear;
   animation-delay: 6400ms;
   animation-iteration-count: infinite; }
 
 .bg-item-4 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 10200ms;
   animation-timing-function: linear;
   animation-delay: 6700ms;
   animation-iteration-count: infinite; }
 
 .bg-item-5 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 10500ms;
   animation-timing-function: linear;
   animation-delay: 7000ms;
   animation-iteration-count: infinite; }
 
 .bg-item-6 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 10800ms;
   animation-timing-function: linear;
   animation-delay: 7300ms;
   animation-iteration-count: infinite; }
 
 .bg-item-7 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 11100ms;
   animation-timing-function: linear;
   animation-delay: 7600ms;
   animation-iteration-count: infinite; }
 
 .bg-item-8 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 11400ms;
   animation-timing-function: linear;
   animation-delay: 7900ms;
   animation-iteration-count: infinite; }
 
 .bg-item-9 {
-  animation-name: travellong;
-  animation-duration: 10s;
+  animation-duration: 11700ms;
   animation-timing-function: linear;
   animation-delay: 8200ms;
   animation-iteration-count: infinite; }
 
 .bg-item-10 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 7000ms;
   animation-timing-function: linear;
   animation-delay: 5500ms;
   animation-iteration-count: infinite;
@@ -395,7 +392,7 @@ a:hover {
 
 .bg-item-11 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 7300ms;
   animation-timing-function: linear;
   animation-delay: 5800ms;
   animation-iteration-count: infinite;
@@ -403,7 +400,7 @@ a:hover {
 
 .bg-item-12 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 7600ms;
   animation-timing-function: linear;
   animation-delay: 6100ms;
   animation-iteration-count: infinite;
@@ -411,7 +408,7 @@ a:hover {
 
 .bg-item-13 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 7900ms;
   animation-timing-function: linear;
   animation-delay: 6400ms;
   animation-iteration-count: infinite;
@@ -419,7 +416,7 @@ a:hover {
 
 .bg-item-14 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 8200ms;
   animation-timing-function: linear;
   animation-delay: 6700ms;
   animation-iteration-count: infinite;
@@ -427,7 +424,7 @@ a:hover {
 
 .bg-item-15 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 8500ms;
   animation-timing-function: linear;
   animation-delay: 7000ms;
   animation-iteration-count: infinite;
@@ -435,7 +432,7 @@ a:hover {
 
 .bg-item-16 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 8800ms;
   animation-timing-function: linear;
   animation-delay: 7300ms;
   animation-iteration-count: infinite;
@@ -443,7 +440,7 @@ a:hover {
 
 .bg-item-17 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 9100ms;
   animation-timing-function: linear;
   animation-delay: 7600ms;
   animation-iteration-count: infinite;
@@ -451,7 +448,7 @@ a:hover {
 
 .bg-item-18 {
   animation-name: travelshort;
-  animation-duration: 7s;
+  animation-duration: 9400ms;
   animation-timing-function: linear;
   animation-delay: 7900ms;
   animation-iteration-count: infinite;

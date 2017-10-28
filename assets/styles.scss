@@ -93,7 +93,7 @@ a:hover {
   box-shadow: $shadow-low;
   @media (min-width: $desktop-breakpoint) {
     width: 400px;
-    height: 300px;
+    height: 280px;
   }
 }
 .name-card {
@@ -273,25 +273,34 @@ a:hover {
 .bg-item:nth-child(9n+2),
 .bg-item:nth-child(9n+3) {
   background-color: $color2;
-  box-shadow: -$l-size 0 0 0 darken($color2, 8%);
+  box-shadow: -$l-size 0 0 0 darken($color2, 8%),
+  $shadow-low;
 }
 .bg-item:nth-child(9n+4),
 .bg-item:nth-child(9n+5),
 .bg-item:nth-child(9n+6) {
   background-color: $color3;
-  box-shadow: -$l-size 0 0 0 darken($color3, 8%);
+  box-shadow: -$l-size 0 0 0 darken($color3, 8%),
+  $shadow-low;
 }
 .bg-item:nth-child(9n+7),
 .bg-item:nth-child(9n+8),
 .bg-item:nth-child(9n+9) {
   background-color: $color1;
-  box-shadow: -$l-size 0 0 0 darken($color1, 8%);
+  box-shadow: -$l-size 0 0 0 darken($color1, 8%),
+  $shadow-low;
+}
+.bg-item:nth-child(odd) {
+  animation-name: travellong;
+}
+.bg-item:nth-child(even) {
+  animation-name: travelshort;
 }
 // Distance
 @for $i from 1 through 9 {
   .bg-item-#{$i} {
-    animation-name: travellong;
-    animation-duration: 10s;
+    // animation-name: travellong;
+    animation-duration: 400ms * $i + 10s;
     animation-timing-function: linear;
     animation-delay: 300ms * $i + 5500ms;
     animation-iteration-count: infinite;
@@ -300,7 +309,7 @@ a:hover {
 @for $i from 10 through 18 {
   .bg-item-#{$i} {
     animation-name: travelshort;
-    animation-duration: 7s;
+    animation-duration: 400ms * $i + 4s;
     animation-timing-function: linear;
     animation-delay: 300ms * $i + 2500ms;
     animation-iteration-count: infinite;
