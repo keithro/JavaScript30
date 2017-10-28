@@ -131,6 +131,10 @@ a:hover {
   100% {
     transform: translate(50px, 100px);
     box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); } }
+#copyright {
+  bottom: 30px;
+  position: absolute; }
+
 .links-container {
   display: flex;
   flex-direction: column;
@@ -329,62 +333,62 @@ a:hover {
   animation-name: travelshort; }
 
 .bg-item-1 {
-  animation-duration: 9300ms;
+  animation-duration: 10400ms;
   animation-timing-function: linear;
   animation-delay: 5800ms;
   animation-iteration-count: infinite; }
 
 .bg-item-2 {
-  animation-duration: 9600ms;
+  animation-duration: 10800ms;
   animation-timing-function: linear;
   animation-delay: 6100ms;
   animation-iteration-count: infinite; }
 
 .bg-item-3 {
-  animation-duration: 9900ms;
+  animation-duration: 11200ms;
   animation-timing-function: linear;
   animation-delay: 6400ms;
   animation-iteration-count: infinite; }
 
 .bg-item-4 {
-  animation-duration: 10200ms;
+  animation-duration: 11600ms;
   animation-timing-function: linear;
   animation-delay: 6700ms;
   animation-iteration-count: infinite; }
 
 .bg-item-5 {
-  animation-duration: 10500ms;
+  animation-duration: 12000ms;
   animation-timing-function: linear;
   animation-delay: 7000ms;
   animation-iteration-count: infinite; }
 
 .bg-item-6 {
-  animation-duration: 10800ms;
+  animation-duration: 12400ms;
   animation-timing-function: linear;
   animation-delay: 7300ms;
   animation-iteration-count: infinite; }
 
 .bg-item-7 {
-  animation-duration: 11100ms;
+  animation-duration: 12800ms;
   animation-timing-function: linear;
   animation-delay: 7600ms;
   animation-iteration-count: infinite; }
 
 .bg-item-8 {
-  animation-duration: 11400ms;
+  animation-duration: 13200ms;
   animation-timing-function: linear;
   animation-delay: 7900ms;
   animation-iteration-count: infinite; }
 
 .bg-item-9 {
-  animation-duration: 11700ms;
+  animation-duration: 13600ms;
   animation-timing-function: linear;
   animation-delay: 8200ms;
   animation-iteration-count: infinite; }
 
 .bg-item-10 {
   animation-name: travelshort;
-  animation-duration: 7000ms;
+  animation-duration: 8000ms;
   animation-timing-function: linear;
   animation-delay: 5500ms;
   animation-iteration-count: infinite;
@@ -392,7 +396,7 @@ a:hover {
 
 .bg-item-11 {
   animation-name: travelshort;
-  animation-duration: 7300ms;
+  animation-duration: 8400ms;
   animation-timing-function: linear;
   animation-delay: 5800ms;
   animation-iteration-count: infinite;
@@ -400,7 +404,7 @@ a:hover {
 
 .bg-item-12 {
   animation-name: travelshort;
-  animation-duration: 7600ms;
+  animation-duration: 8800ms;
   animation-timing-function: linear;
   animation-delay: 6100ms;
   animation-iteration-count: infinite;
@@ -408,7 +412,7 @@ a:hover {
 
 .bg-item-13 {
   animation-name: travelshort;
-  animation-duration: 7900ms;
+  animation-duration: 9200ms;
   animation-timing-function: linear;
   animation-delay: 6400ms;
   animation-iteration-count: infinite;
@@ -416,7 +420,7 @@ a:hover {
 
 .bg-item-14 {
   animation-name: travelshort;
-  animation-duration: 8200ms;
+  animation-duration: 9600ms;
   animation-timing-function: linear;
   animation-delay: 6700ms;
   animation-iteration-count: infinite;
@@ -424,7 +428,7 @@ a:hover {
 
 .bg-item-15 {
   animation-name: travelshort;
-  animation-duration: 8500ms;
+  animation-duration: 10000ms;
   animation-timing-function: linear;
   animation-delay: 7000ms;
   animation-iteration-count: infinite;
@@ -432,7 +436,7 @@ a:hover {
 
 .bg-item-16 {
   animation-name: travelshort;
-  animation-duration: 8800ms;
+  animation-duration: 10400ms;
   animation-timing-function: linear;
   animation-delay: 7300ms;
   animation-iteration-count: infinite;
@@ -440,7 +444,7 @@ a:hover {
 
 .bg-item-17 {
   animation-name: travelshort;
-  animation-duration: 9100ms;
+  animation-duration: 10800ms;
   animation-timing-function: linear;
   animation-delay: 7600ms;
   animation-iteration-count: infinite;
@@ -448,7 +452,7 @@ a:hover {
 
 .bg-item-18 {
   animation-name: travelshort;
-  animation-duration: 9400ms;
+  animation-duration: 11200ms;
   animation-timing-function: linear;
   animation-delay: 7900ms;
   animation-iteration-count: infinite;
