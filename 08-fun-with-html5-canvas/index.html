@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fun with HTML5 Canvas</title>
+</head>
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+
+  <script>
+    const canvas = document.querySelector('#draw');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.strokeStyle = '#BADA55';
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 100;
+    ctx.globalCompositeOperation = 'luminosity';
+
+    // starts drawing when holding down button
+    let isDrawing = false;
+    // sets starting point
+    let lastX = 0;
+    let lastY = 0;
+    let hue = 0;
+    let direction = true;
+
+    function draw(e) {
+      if (!isDrawing) return; // stops function when not moused down
+      console.log(e); // see mouse events (where mouse is when fired)
+
+      ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY); // start from point
+      ctx.lineTo(e.offsetX, e.offsetY); // go to point
+      ctx.stroke(); // start stroke
+      [lastX, lastY] = [e.offsetX, e.offsetY]; // update starting point
+      
+      hue++; // increment hue
+      if (hue >= 360) {
+        hue = 0;
+      }
+
+      if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+        direction = !direction;
+      }
+      if (direction) {
+        ctx.lineWidth++;
+      } else {
+        ctx.lineWidth--;
+      }
+    }
+
+    canvas.addEventListener('mousedown', (e) => { //need to pass in event
+      isDrawing = true;
+      // update starting point
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+  </script>
+  
+  <style>
+    html, body {
+      margin:0;
+    }
+  </style>
+
+</body>
+</html>
