@@ -133,7 +133,8 @@ a:hover {
     box-shadow: -8px 3px 17px 0 rgba(0, 0, 0, 0.2), -6px 2px 20px 0 rgba(0, 0, 0, 0.19); } }
 #copyright {
   bottom: 30px;
-  position: absolute; }
+  position: absolute;
+  color: #19a899; }
 
 .links-container {
   display: flex;
