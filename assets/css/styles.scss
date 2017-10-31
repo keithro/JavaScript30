@@ -29,27 +29,40 @@ $desktop-breakpoint: 60rem; //960
   box-sizing: border-box;
   margin: 0;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: 'Open Sans', sans-serif;
-	font-size: $m-size;
+	font-size: 1.2rem; // set base size to 16px
   color:  white;
   background: $color5;
+  
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 1.4rem; // set base size to 16px
+  }
+  
+  @media (min-width: $desktop-breakpoint) {
+    font-size: 1.6rem; // set base size to 16px
+  }
 }
+
 h3 {
   line-height: 1.6;
   margin: 0 0 $s-size;
 }
+
 a {
   color: white;
   text-decoration: none;
   transition: all 300ms ease;
+  &:hover {
+    color: rgba(255, 255, 255, .75);
+  }
 }
-a:hover {
-  color: rgba(255, 255, 255, .8);
-}
+
 .container {
   display: flex;
   width: 100vw;
@@ -59,134 +72,141 @@ a:hover {
     flex-direction: row;
   }
 }
+
+// ---------------
+//  DISPLAY CARDS
+// ---------------
+
 .display-container {
   width: 100vw;
-  height: 60vh;
+  flex: 0 0 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: $tablet-breakpoint) {
+    width: 100vw;
+    flex: 1 1 66vh;
+  }
   @media (min-width: $desktop-breakpoint) {
     flex: 3 1 66vw;
     height: 100vh;
   }
 }
+
 .card-container {
   background: transparent;
-  width: 360px;
-  height: 360px;
+  width: 300px;
+  height: 320px;
   position: relative;
+  
+  @media (min-width: $tablet-breakpoint) {
+    width: 400px;
+    height: 340px;   
+  }
+  
   @media (min-width: $desktop-breakpoint) {
     width: 400px;
     height: 400px;
   }
 }
 
-// ---------------
-//  DISPLAY CARDS
-// ---------------
-
 .card {
   border-radius: 22px;
-  width: 360px;
-  height: 270px;
+  width: 250px;
+  height: 180px;
   position: absolute;
   box-shadow: $shadow-low;
+  
+  @media (min-width: $tablet-breakpoint) {
+    width: 340px;
+    height: 240px;
+  }
+  
   @media (min-width: $desktop-breakpoint) {
     width: 400px;
     height: 280px;
   }
 }
+
 .name-card {
   color: darken($color2, 10%);
   background: $color2;
-  padding: $l-size;
-  transform: rotate(-90deg);
-  top: 50px;
-  left: -50px;
-  // transition: transform 1000ms cubic-bezier(0.42, 0, 0.49, 1.01) 200ms; // VERSION 1 ANIMATION
-  // animation: jiggle 800ms ease 2200ms 1;         // VERSION 1 ANIMATION
-  animation: 
-    jiggle 800ms ease 3500ms 1,
-    moveup 1000ms cubic-bezier(0.42, 0, 0.49, 1.01) 4500ms 1 forwards;
+  padding: $m-size;
+  top: 0px;
+  left: 0px;
+
+  @media (min-width: $tablet-breakpoint) {
+    padding: $l-size;
+    top: 50px;
+    left: -50px;
+    transform: rotate(-90deg);
+    animation: 
+      jiggle 800ms ease 3500ms 1,
+      moveup 1000ms cubic-bezier(0.42, 0, 0.49, 1.01) 4500ms 1 forwards;
+  }
 }
+
+@keyframes jiggle {
+  0% { transform: translateX(0) rotate(-90deg); }
+  14.2857% { transform: translateX(-12px) rotate(-82deg); }
+  28.5714% { transform: translateX(-24px) rotate(-98deg); }
+  42.8571% { transform: translateX(-36px) rotate(-82deg); }
+  57.1429% { transform: translateX(-36px) rotate(-98deg); }
+  71.4286% { transform: translateX(-24px) rotate(-82deg); }
+  85.7143% { transform: translateX(-12px) rotate(-98deg); }
+  100% { transform: translateX(0) rotate(-90deg); }
+}
+@keyframes moveup {
+  0% { transform: translateX(0) rotate(-90deg); }
+  100% { transform: translate(25px, -100px) rotate(0deg); }
+}
+
 .name-card h1 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-size: 5.2rem;
+  font-size: 3.4rem;
   margin: 0 0 $xs-size;
   font-weight: 800;
+  
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 4.6rem;
+  }
+  
+  @media (min-width: $desktop-breakpoint) {
+    font-size: 5.2rem;
+  }
 }
-// .card-container:hover .name-card {             // VERSION 1 ANIMATION
-//   transform: translate(25px, -100px) rotate(0deg);
-// }
+
 .name-card h1 a {
   color: darken($color2, 10%);
-}
-.name-card h1 a:hover {
-  color: darken($color2, 8%);
-}
-@keyframes jiggle {
-  0% {
-    transform: translateX(0) rotate(-90deg);
-  }
-  14.2857% {
-    transform: translateX(-12px) rotate(-82deg);
-  }
-  28.5714% {
-    transform: translateX(-24px) rotate(-98deg);
-  }
-  42.8571% {
-    transform: translateX(-36px) rotate(-82deg);
-  }
-  57.1429% {
-    transform: translateX(-36px) rotate(-98deg);
-  }
-  71.4286% {
-    transform: translateX(-24px) rotate(-82deg);
-  }
-  85.7143% {
-    transform: translateX(-12px) rotate(-98deg);
-  }
-  100% {
-    transform: translateX(0) rotate(-90deg);
+  &:hover {
+    color: darken($color2, 8%);
   }
 }
-@keyframes moveup {
-  0% {
-    transform: translateX(0) rotate(-90deg);
-  }
-  100% {
-    transform: translate(25px, -100px) rotate(0deg);
-  }
-}
+
 .title-card {
   background: $color4;
   color: $color2;
-  padding: $xl-size;
-  top: 60px;
+  padding: $l-size;
+  top: 150px;
   left: 50px;
-  // transition:                                         // VERSION 1 ANIMATION
-  //   transform 500ms cubic-bezier(0.51, 1.48, 0.76, 0.98) 100ms,
-  //   box-shadow 500ms linear 100ms;
-  animation: moveoff 500ms cubic-bezier(0.51, 1.48, 0.76, 0.98) 3800ms 1 forwards;
-}
-.title-card h1 {
-  font-weight: 300;
-  font-size: 5.4rem;
-  margin: 0 0 $s-size;
-  color: white;
-}
-.title-card p {
-  line-height: $l-size;
-}
-// .card-container:hover .title-card {             // VERSION 1 ANIMATION
-//   transform: translate(50px, 100px);
-//   box-shadow: $shadow-high;
-// }
-@keyframes moveoff {
-  0% {
-    
+  
+  @media (min-width: $tablet-breakpoint) {
+    top: 50px;
+    left: 30px;
+    padding: $l-size $xl-size;
+    animation: moveoff 500ms cubic-bezier(0.51, 1.48, 0.76, 0.98) 3800ms 1 forwards;
   }
+  
+  @media (min-width: $desktop-breakpoint) {
+    top: 60px;
+    left: 50px;
+    padding: $xl-size;
+  }
+}
+
+@keyframes moveoff {
   100% {
     transform: translate(50px, 100px);
     box-shadow: $shadow-high;
@@ -199,6 +219,29 @@ a:hover {
   color: $color3;
 }
 
+.title-card h1 {
+  font-weight: 300;
+  font-size: 3.2rem;
+  margin: 0 0 $s-size;
+  color: white;
+  
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 4.0rem;
+  }
+  
+  @media (min-width: $desktop-breakpoint) {
+    font-size: 5.4rem;
+  }
+}
+
+.title-card p {
+  line-height: $m-size;
+
+  @media (min-width: $tablet-breakpoint) {
+    line-height: $l-size;
+  }
+}
+
 // -----------
 //    LINKS
 // -----------
@@ -207,15 +250,22 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 40vh;
-  overflow: scroll;
+  flex: 0 0 25vh;
+
+  @media (min-width: $tablet-breakpoint) {
+    width: 100vw;
+    flex: 1 1 33vh;
+    overflow: scroll;
+  }
+
   @media (min-width: $desktop-breakpoint) {
     flex: 1 1 34vw;
     height: 100vh;
   }
 }
+
 .link {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: $m-size $l-size;
   border-radius: 8px;
   margin: .2rem;
@@ -223,35 +273,34 @@ a:hover {
   box-shadow: $shadow-low;
   transition: all 300ms ease-out 100ms;
   transform: translateX(11%);
-  @media (min-width: $desktop-breakpoint) {
+  
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 1.8rem;
     padding: $l-size $xl-size;
   }
-}
-.link:hover {
-  transform: translateX(10%) scale(1.1);
-  background: $color4;
-  box-shadow: $shadow-high;
+
+  &:hover {
+    transform: translateX(10%) scale(1.1);
+    background: $color4;
+    box-shadow: $shadow-high;
+  }
 }
 
-@for $i from 1 through 30 {
-  .link-#{$i} {
-    animation: wave 2s ease 1;
-    animation-delay: .1s * $i + .7s;
+@media (min-width: $tablet-breakpoint) {
+  @for $i from 1 through 30 {
+    .link-#{$i} {
+      animation: wave 2s ease 1;
+      animation-delay: .1s * $i + .7s;
+    }
   }
 }
 
 @keyframes wave{
-  0% {
-    transform: translateX(11%);
-  }
-  40% {
-    transform: translateX(11.1%) scale(1.03);
-    background: $color4;
-    box-shadow: $shadow-high;
-  }
-  100% {
-    transform: translateX(11%);
-  }
+  0% { transform: translateX(11%); }
+  40% { transform: translateX(11.1%) scale(1.03);
+        background: $color4;
+        box-shadow: $shadow-high; }
+  100% { transform: translateX(11%); }
 }
 
 // --------------
@@ -260,11 +309,20 @@ a:hover {
 
 .bg-item {
   position: absolute;
-  height: 5.2rem;
+  height: 4rem;
   transform: rotate(-30deg);
   border-radius: 2.6rem;
+  
+  @media (min-width: $tablet-breakpoint) {
+    height: 4.6rem;
+  }
+  
+  @media (min-width: $desktop-breakpoint) {
+    height: 5.2rem;
+  }
 }
-// Width
+
+// Widths                               * Adjust for mobile? *
 .bg-item:nth-child(3n+1) {
   width: 100px;
 }
@@ -274,7 +332,8 @@ a:hover {
 .bg-item:nth-child(3n+3) {
   width: 300px;
 }
-// Color
+
+// Colors
 .bg-item:nth-child(9n+1),
 .bg-item:nth-child(9n+2),
 .bg-item:nth-child(9n+3) {
@@ -296,16 +355,17 @@ a:hover {
   box-shadow: -$l-size 0 0 0 darken($color1, 8%),
   $shadow-low;
 }
+
+// Travel Distances
 .bg-item:nth-child(odd) {
   animation-name: travellong;
 }
 .bg-item:nth-child(even) {
   animation-name: travelshort;
 }
-// Distance
+
 @for $i from 1 through 9 {
   .bg-item-#{$i} {
-    // animation-name: travellong;
     animation-duration: 400ms * $i + 10s;
     animation-timing-function: linear;
     animation-delay: 300ms * $i + 5500ms;
@@ -314,7 +374,6 @@ a:hover {
 }
 @for $i from 10 through 18 {
   .bg-item-#{$i} {
-    animation-name: travelshort;
     animation-duration: 400ms * $i + 4s;
     animation-timing-function: linear;
     animation-delay: 300ms * $i + 2500ms;
@@ -322,109 +381,109 @@ a:hover {
     animation-direction: reverse;
   }
 }
+
 @keyframes travellong {
-  0% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
-  25% {
-    transform: translate(-60px, 40px) rotate(-30deg);
-  }
-  50% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
-  75% {
-    transform: translate(60px, -40px) rotate(-30deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
+  0% { transform: translate(0, 0) rotate(-30deg); }
+  25% { transform: translate(-60px, 40px) rotate(-30deg); }
+  50% { transform: translate(0, 0) rotate(-30deg); }
+  75% { transform: translate(60px, -40px) rotate(-30deg); }
+  100% { transform: translate(0, 0) rotate(-30deg); }
 }
+
 @keyframes travelshort {
-  0% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
-  25% {
-    transform: translate(-30px, 20px) rotate(-30deg);
-  }
-  50% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
-  75% {
-    transform: translate(30px, -20px) rotate(-30deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(-30deg);
-  }
+  0% { transform: translate(0, 0) rotate(-30deg); }
+  25% { transform: translate(-30px, 20px) rotate(-30deg); }
+  50% { transform: translate(0, 0) rotate(-30deg); }
+  75% { transform: translate(30px, -20px) rotate(-30deg); }
+  100% { transform: translate(0, 0) rotate(-30deg); }
 }
+
 
 .bg-item-1 {
   top: -70px;
   left: 280px;
 }
+
 .bg-item-2 {
   top: -20;
   left: -150px;
 }
+
 .bg-item-3 {
   top: 350px;
   left: -40px;
 }
+
 .bg-item-4 {
   top: 420px;
   left: 80px;
 }
+
 .bg-item-5 {
   top: 90px;
   left: 390px;
 }
+
 .bg-item-6 {
   top: -90px;
   left: 390px;
 }
+
 .bg-item-7 {
   top: 480px;
   left: 370px;
 }
+
 .bg-item-8 {
   top: 270px;
   left: 450px;
 }
+
 .bg-item-9 {
   top: -150px;
   left: 340px;
 }
+
 .bg-item-10 {
   top: 380px;
   left: -80px;
 }
+
 .bg-item-11 {
   top: 220px;
   left: -160px;
 }
+
 .bg-item-12 {
   top: 300px;
   left: 360px;
 }
+
 .bg-item-13 {
   top: 140px;
   left: -100px;
 }
+
 .bg-item-14 {
   top: 260px;
   left: 10px;
 }
+
 .bg-item-15 {
   top: 60px;
   left: 380px;
 }
+
 .bg-item-16 {
   top: 440px;
   left: 260px;
 }
+
 .bg-item-17 {
   top: -130px;
   left: -30px;
 }
+
 .bg-item-18 {
   top: -90px;
   left: -80px;
