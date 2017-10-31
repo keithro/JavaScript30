@@ -77,7 +77,7 @@
     function removeTransition(e) {
       // console.log(e); // console.log  ended events (passed in from forEach function below) notice propertyName on transform event
 
-      if(e.propertyName !== 'transform') return; // skip if not the transfor event
+      if(e.propertyName !== 'transform') return; // skip if not the transform event
       // console.log(e.propertyName); // see propertyName of event
       // console.log(this); // confirm this is the div with the matching key
       this.classList.remove('playing');
