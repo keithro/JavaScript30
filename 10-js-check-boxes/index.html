@@ -117,10 +117,10 @@
       if (e.shiftKey && this.checked) {
         // loop over every single checkbox
         checkboxes.forEach(checkbox => {
-          console.log(checkbox); // logs all boxes when shift key down
+          // console.log(checkbox); // logs all boxes when shift key down
           if (checkbox === this || checkbox === lastChecked) { // triggers change when encounters this or last checked
             inBetween = !inBetween; // switches inBetween val to true for each box starting when triggered and ending when triggered again
-            console.log('Starting to check them in between.');
+            // console.log('Starting to check them in between.');
           }
 
           if(inBetween) {

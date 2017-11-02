@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Key Sequence Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #ffffff;
+    }
+
+    .secretmessage {
+      opacity: 0;
+      color: white;
+      font-size: 4em;
+      text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+
+    .shouting {
+      opacity: 1;
+    }
+  </style>
+
+  <h2>Type the Password</h2>
+  <h5>(hint: it's a <em>secret</em>)</h5>
+  <h1 class="secretmessage">YAY!! AGAIN!</h1>
+  
+  <script>
+    const pressed = [];
+    const secretCode = 'secret';
+    const shout = document.querySelector('.secretmessage');
+    const bg = document.querySelector('body');
+    function randomColor() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    window.addEventListener('keyup', (e) => {
+      // console.log('key pressed', e.key); // to see what key was pressed
+      pressed.push(e.key);
+      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length) // start n position from right using (-), trim 'pressed' - length of secret code
+      // console.log('trimmed array: ', pressed); // to see trimmed array
+      if (pressed.join('').includes(secretCode)){
+        cornify_add();
+        shout.classList.add("shouting");
+        bgColor = randomColor(); // create random color
+        bg.style.background = bgColor; // add color to background
+      }
+    });
+  </script>
+
+</body>
+</html>
