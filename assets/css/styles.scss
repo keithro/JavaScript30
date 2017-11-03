@@ -135,6 +135,7 @@ a {
   padding: $m-size;
   top: 0px;
   left: 0px;
+  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);             /* Keep or nah? */
 
   @media screen and (min-width: $tablet-breakpoint) {
     padding: $l-size;
