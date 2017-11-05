@@ -58,6 +58,7 @@
   
     <script>
       const inputs = document.querySelectorAll('.controls input');
+      const image = document.querySelector('img'); // better selector than just his 'document.documentElement' below
 
       function handleUpdate() {
         // console.log(this.value); // value retreived from event listeners
@@ -67,7 +68,8 @@
         // console.log(suffix);
         // console.log(this.name); // name of input
 
-        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        // document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        image.style.setProperty(`--${this.name}`, this.value + suffix);
       };
 
       inputs.forEach(input => input.addEventListener('change', handleUpdate));
