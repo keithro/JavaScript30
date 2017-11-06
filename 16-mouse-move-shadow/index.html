@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mouse Shadow Effect</title>
+</head>
+<body>
+  <div class="hero">
+    <h1 contenteditable>🔥WOAH!</h1>
+  </div>
+  
+  <style>
+    html {
+      color: black;
+      font-family: sans-serif;
+    }
+  
+    body {
+      margin: 0;
+    }
+  
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+    }
+  
+    h1 {
+      text-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+      font-size: 100px;
+    }
+  </style>
+  
+  <script>
+    const hero = document.querySelector('.hero');
+    const text = hero.querySelector('h1');
+    const walk = 100; // 100px
+
+    function shadow(e) {
+      const { offsetWidth: width, offsetHeight: height } = hero;
+      // console.log(e);
+      let { offsetX: x, offsetY: y } = e;
+      // console.log(x, y); // notice they restart at top left corner of h1
+
+      // console.log(this, e.target); // this = things listener is on, e.target thing it actually triggered on. h1 becomes target when over it
+      if (this !== e.target) {
+        x = x + e.target.offsetLeft; // + distance between left and window
+        y = y + e.target.offsetTop; // + distance from top of window
+      }
+      // console.log(x, y); // now correct
+
+      const xWalk = Math.round((x / width * walk) - (walk / 2)); // 50 to -50
+      const yWalk = Math.round((y / height * walk) - (walk / 2)); // 50 to -50
+      // console.log(xWalk, yWalk);
+
+      text.style.textShadow = `
+        ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
+        ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0,255,255,0.7),
+        ${yWalk}px ${xWalk}px 0 rgba(0,255,0,0.7),
+        ${yWalk * -1}px ${xWalk * -1}px 0 rgba(0,0,255,0.7)
+      `;
+
+    }
+
+    hero.addEventListener('mousemove', shadow);
+  </script>
+  
+</body>
+</html>
