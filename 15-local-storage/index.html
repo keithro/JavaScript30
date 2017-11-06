@@ -33,11 +33,17 @@
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
     </form>
+    <input class="check-all" type="submit" value="Check All">
+    <input class="uncheck-all" type="submit" value="Uncheck All">
+    <input class="remove-items" type="submit" value="Remove All">
   </div>
   
   <script>
     const addItems = document.querySelector('.add-items'); // form
     const itemsList = document.querySelector('.plates'); // ul
+    const removeItems = document.querySelector('.remove-items');
+    const checkAll = document.querySelector('.check-all');
+    const uncheckAll = document.querySelector('.uncheck-all');
     const items = JSON.parse(localStorage.getItem('items')) || [];
 
     function addItem(e) {
@@ -77,8 +83,33 @@
       populateList(items, itemsList); // updates page
     }
 
+    function removeAllItems() {
+      localStorage.clear();
+      items.splice(0);
+      populateList(items, itemsList);
+    }
+
+    function markAllChecked() {
+      items.forEach(item => {
+        item.done = true;
+      });
+      localStorage.setItem('items', JSON.stringify(items));
+      populateList(items, itemsList);
+    }
+
+    function clearAllChecks() {
+      items.forEach(item => {
+        item.done = false;
+      });
+      localStorage.setItem('items', JSON.stringify(items));
+      populateList(items, itemsList);
+    }
+
     addItems.addEventListener('submit', addItem); // 'click' does not cover all possible ways to submit where submit.
     itemsList.addEventListener('click', toggleDone);
+    removeItems.addEventListener('click', removeAllItems);
+    checkAll.addEventListener('click', markAllChecked);
+    uncheckAll.addEventListener('click', clearAllChecks);
 
     populateList(items, itemsList); // runs on page load
 
