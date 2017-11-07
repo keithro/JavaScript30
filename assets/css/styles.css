@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text|Raleway");
-/* RGB */
+/* Colors */
+/* Shadows */
+/* Spacing */
+/* Breakpoints */
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -216,6 +219,8 @@ a {
     .link {
       font-size: 1.8rem;
       padding: 2.4rem 4.2rem; } }
+  .link:visited {
+    color: #bae5e0; }
   .link:hover {
     transform: translateX(10%) scale(1.1);
     background: #1fc19e;
