@@ -358,13 +358,13 @@ a {
 }
 
 .bg-item-3 {
-  top: 350px;
-  left: -40px;
+  left: 90px;
+  bottom: -60px;
 }
 
 .bg-item-4 {
-  top: 420px;
-  left: 80px;
+  bottom: 50px;
+  left: -30px;
 }
 
 .bg-item-5 {
@@ -373,13 +373,13 @@ a {
 }
 
 .bg-item-6 {
-  top: 220px;
+  top: 210px;
   left: -160px;
 }
 
 .bg-item-7 {
-  top: 480px;
-  left: 370px;
+  bottom: -120px;
+  right: -70px;
 }
 
 .bg-item-8 {
@@ -393,7 +393,7 @@ a {
 }
 
 .bg-item-10 {
-  top: 380px;
+  bottom: -20px;
   left: -80px;
 }
 
@@ -408,13 +408,13 @@ a {
 }
 
 .bg-item-13 {
-  top: 140px;
+  top: 100px;
   left: -100px;
 }
 
 .bg-item-14 {
-  top: 260px;
-  left: 10px;
+  bottom: 80px;
+  left: -10px;
 }
 
 .bg-item-15 {
@@ -423,8 +423,8 @@ a {
 }
 
 .bg-item-16 {
-  top: 440px;
-  left: 260px;
+  bottom: -80px;
+  right: -160px;
 }
 
 .bg-item-17 {
@@ -480,6 +480,7 @@ a {
   }
 
   &:hover {
+    color: #ffffff;
     transform: translateX(10%) scale(1.1);
     background: $color4;
     box-shadow: $shadow-high;
