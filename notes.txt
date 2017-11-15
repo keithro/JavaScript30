@@ -1,0 +1,57 @@
+
+TODO:
+* Add webpack for Sass compliling, prefixing, and image loading
+* Clean up daily notes.
+* ADD: "painstakenly crafted by Keith Rodriguez" ?
+* add more info to links on hover? can use scroll height to open info on mobile and tablet
+* keep text shadow on name card?
+
+sass watch command:
+sass --watch assets/css/styles.scss:assets/css/styles.css
+
+
+ NOTES
+-------
+1. HTMLMediaElement.play() to play audio
+    Use event listeners to add class to elements and the 'transitionend' event to remove class 
+    Use data attriutes
+2. Using setInterval, Date and Date.prototype methods to adjust the rotate property.
+3. How to change element properties using input selectors.
+4. Filter, map, sort, reduce, 
+    How to convert HTML node list into an array with either Array.from() or the spread operator.
+    Sum up instances using reduce.
+    A great example of sorting
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. Compare array of key presses to secret string
+    BONUS: added random color to background
+13. Slide in images by calculating how for down user has scrolled and where content is in relation using window.scrollY, window.innerHeight and element.offsetTop.
+    Learned what the concept of 'debouncing' is to reduce the rate of event firing and decrese resource consumption.
+    * this is also a good example of how to animate by adding a class w/ javascript
+14. The difference between referencing and copying variable.
+    includes several good methods for copying arrays and objects.
+15. How to use local storage for data persistance and event delegation on items after event listeners were created.
+    Also points out the benefit of using the 'submit' eventListener over 'click' for forms and the like.
+    ADDED: remove all, check all and uncheck all functionality
+16. Using offsetTop and offsetLeft to calculate mouse hover position
+17. Use a regEx to sort a list of items with articles. Append to DOM using .map .join and .innerHTML
+18. Take dataset property and create an array of time in seconds, then calculate total hours, minutes and seconds.
+19. create video and image capture using getUserMedia() and HTML5 Canvas and experiment with image effects by adjusting rgba array.
+Listen for 'canplay' event before playing video. Needs server - used 'browser-sync' npm package.
+20. Event listener for 'results', create new paragraph element, append to div. Needs server - used 'browser-sync' npm package.
+21. 
+22. Use this.getBoundingClientRect() to get information about where an item is on page and its size.
+23. Used SpeechSynthesisUtterance to turn text into speech. The name, pitch, and text input 'name' attributes must be named as such to match up with the utterance. Also learned a couple ways to pass argument into function (from event listener)
+24. Fix nav by adding a single class to the body when nav reaches the top of page. Distances calculated with offsetTop, offsetHeight and scrollY.
+25. Understanding Event Capture, Propagation, Bubbling and Once
+    - Capture goes from top of body down to element you clicked on,
+    - Bubble will then trigger events back up.
+    - You can prevent capture & bubbling by using '.stopPropagation()' on the event (e).
+        *this will stop capture from going down and propagation from going up the DOM so if capture set to 'true' the event stops at the outermost parent element.
+    - Once will listen for event once and then unbind itself (remove event listener)
+
