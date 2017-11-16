@@ -54,4 +54,4 @@ Listen for 'canplay' event before playing video. Needs server - used 'browser-sy
     - You can prevent capture & bubbling by using '.stopPropagation()' on the event (e).
         *this will stop capture from going down and propagation from going up the DOM so if capture set to 'true' the event stops at the outermost parent element.
     - Once will listen for event once and then unbind itself (remove event listener)
-
+26. Again we are using getBoundingClientRect to get positioning info and using add and remove class functions to show/hide the menu
