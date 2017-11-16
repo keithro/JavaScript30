@@ -19,9 +19,8 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of
-              web development. It should be though!</p>
+            <img src="http://www.keithrodriguez.me/assets/img/keith.jpg">
+            <p>Keith is really into web development. He is dedicated to learning and applying new technologies in order to enhance functionality and user experience.</p>
           </div>
         </div>
       </li>
@@ -62,16 +61,20 @@
         <a href="#">Other Links</a>
         <ul class="dropdown dropdown3">
           <li>
-            <a class="button" href="http://twitter.com/wesbos">Twitter</a>
+            <!-- <a class="button" href="http://twitter.com/wesbos">Twitter</a> -->
+            <a class="button" href="https://www.linkedin.com/in/keithrodriguez/">LinkedIn</a>
           </li>
           <li>
-            <a class="button" href="http://facebook.com/wesbos.developer">Facebook</a>
+            <!-- <a class="button" href="http://facebook.com/wesbos.developer">Facebook</a> -->
+            <a class="button" href="https://github.com/keithro">GitHub</a>
           </li>
           <li>
-            <a class="button" href="http://wesbos.com">Blog</a>
+            <!-- <a class="button" href="http://wesbos.com">Blog</a> -->
+            <a class="button" href="https://www.facebook.com/rodriguez.keith">Facebook</a>
           </li>
           <li>
-            <a class="button" href="http://wesbos.com/courses">Course Catalog</a>
+            <!-- <a class="button" href="http://wesbos.com/courses">Course Catalog</a> -->
+            <a class="button" href="https://codepen.io/keither/">Codepen</a>
           </li>
         </ul>
       </li>
@@ -93,15 +96,15 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
-      linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
-      linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
-      linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+      background: #BBD2C5;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
   
     h2 {
+      text-align: center;
       margin-top: 0;
-      padding-top: .8em;
+      padding: .8em .6em 0 .6em;
       color: #eee;
     }
   
@@ -196,6 +199,7 @@
     .bio img {
       float: left;
       margin-right: 20px;
+      max-width: 150px;
     }
   
     .courses {
@@ -221,10 +225,7 @@
       margin-bottom: 10px;
     }
   
-  
-    /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
-  
-    .button[href*=twitter] {
+    .button[href*=linkedin] {
       background: #019FE9;
     }
   
