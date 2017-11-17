@@ -68,6 +68,8 @@ a {
   width: 100vw;
   height: 100vh;
   flex-direction: column;
+  overflow-x: hidden;
+
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
   }
@@ -450,7 +452,8 @@ a {
   @media screen and (min-width: $tablet-breakpoint) {
     width: 100vw;
     flex: 1 1 33vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   @media screen and (min-width: $desktop-breakpoint) {

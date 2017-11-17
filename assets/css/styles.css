@@ -37,7 +37,8 @@ a {
   display: flex;
   width: 100vw;
   height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-x: hidden; }
   @media screen and (min-width: 66rem) {
     .container {
       flex-direction: row; } }
@@ -456,7 +457,8 @@ a {
     .links-container {
       width: 100vw;
       flex: 1 1 33vh;
-      overflow: scroll; } }
+      overflow-y: scroll;
+      overflow-x: hidden; } }
   @media screen and (min-width: 66rem) {
     .links-container {
       flex: 1 1 34vw;
