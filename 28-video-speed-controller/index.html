@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video Speed Controller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls autoplay></video>
+    <div class="speed">
+      <div class="speed-bar">1×</div>
+    </div>
+  </div>
+  
+  <script>
+    const speed = document.querySelector('.speed');
+    const bar = speed.querySelector('.speed-bar');
+    const video = document.querySelector('.flex');
+
+    function handleMove(e) { // need reg function since useing 'this'
+      const y = e.pageY - this.offsetTop; // to subtract any padding or margin
+      const percent = y / this.offsetHeight; // y / height of speed bar
+      const min = 0.5;
+      const max = 4;
+
+      const height = Math.round(percent * 100) + '%'; // refactor into one line?
+      bar.style.height = height;
+      const playbackRate = percent * (max - min) + min;
+      bar.textContent = playbackRate.toFixed(2) + 'x'; // toFixed rounds number
+      video.playbackRate = playbackRate; // set playback rate
+    }
+
+    speed.addEventListener('mousemove', handleMove);
+
+  </script>
+</body>
+</html>
