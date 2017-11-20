@@ -59,4 +59,6 @@ Listen for 'canplay' event before playing video. Needs server - used 'browser-sy
 28.
 29. Used the Date object and methods () to create clock. We used our custom data attributes to get amount of time from buttons.
     Used "document.title = display" to update the tab title displayed in the browser
+30. Craeted game using click event and random elements from array and random times.
+    Introduced a clever way to prevent a random picker from picking the same item twice using recursion.
 
